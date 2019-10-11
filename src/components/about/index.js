@@ -20,6 +20,15 @@ function AboutSection({ fixedImage }) {
           he worked at two growth-stage startups in Boston, Notarize and Alignable, developing user-facing
           features with React and Ruby on Rails.
         </p>
+        <p>
+          Before pivoting to tech, Adam started his career as an actuary.  He spent over 8 years in P&C insurance
+          pricing home and auto products at two major Massachusetts-based companies, in a range of roles spanning
+          data delivery, business operations, and team management.
+        </p>
+        <p> 
+          He is available for hire for freelance projects or consulting.&nbsp;
+          <a href="https://www.linkedin.com/in/adamkinson/">Reach out</a> to learn more!
+        </p>
       </div>
     </div>
   );
