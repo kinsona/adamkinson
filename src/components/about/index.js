@@ -4,16 +4,15 @@ import React from "react";
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-function AboutSection({ fixedImage }) {
+function AboutSection({ headshot }) {
   return (
     <div className="AboutSection">
-      <Img className="AboutSection__Image" fixed={fixedImage} />
+      <Img className="AboutSection__Image" fluid={headshot} />
       <div className="AboutSection__Text">
         <p>
           <strong>Adam Kinson</strong> is a mission-driven software engineer living in West Hartford, CT.  Having
           transitioned into a tech career as his second act, he strongly believes in improving the accessibility of
-          technology as a means to address local economic, educational, and cultural needs.  His passion project,
-          Community Code, aims to empower people to solve issues in their own community with tech solutions.
+          technology as a means to address local economic, educational, and cultural needs.
         </p>
         <p>
           He currently works at Cigna building full-stack solutions using Python, Angular, Kubernetes, and AWS.  Previously,
@@ -38,16 +37,16 @@ const AboutSectionWithImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "ajk.jpg" }) {
+        headshot: file(relativePath: { eq: "ajk.jpg" }) {
           childImageSharp {
-            fixed(width: 360) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 360, srcSetBreakpoints: [ 100, 200, 360 ] ) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `}
-    render={data => <AboutSection fixedImage={data.placeholderImage.childImageSharp.fixed} />}
+    render={data => <AboutSection headshot={data.headshot.childImageSharp.fluid} />}
   />
 )
 
