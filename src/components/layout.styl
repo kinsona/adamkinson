@@ -1,9 +1,14 @@
 @import "./variables.styl"
 
 body
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  font-family: Verdana,"Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size: $font-size-large
   color: $text-primary
+  background-color: $color-primary
   margin: 0
+  
+  #___gatsby
+    background-image: linear-gradient(white, $color-primary)
 
   strong
     font-weight: bold
@@ -14,9 +19,3 @@ a
   &:hover
     color: $text-link-hover
     text-decoration: underline
-    
-footer
-  text-align: right
-  line-height: 3em
-  color: $text-secondary
-  font-size: $font-size-small
