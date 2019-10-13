@@ -20,9 +20,6 @@ const Layout = ({ children }) => (
       <>
         <div>
           {children}
-          <footer>
-            Website by <a href="https://www.adamkinson.com">Adam Kinson</a>
-          </footer>
         </div>
       </>
     )}
