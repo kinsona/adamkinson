@@ -2,14 +2,18 @@
 
 .AboutSection
   responsive-container()
-  margin-top: $header-height
+  padding-top: $header-height
+  strong
+    font-size: $font-size-xlarge
+    @media (max-width: 450px)
+      font-size: $font-size-standard
 
   &__Image
     float: left
     margin-right: 24px
     border-radius: 6px
     @media (min-width: 992px)
-      width: 360px
+      width: 300px
     @media (min-width: 768px) and (max-width: 991px)
       width: 200px
     @media (min-width: 451px) and (max-width: 767px)
@@ -20,8 +24,15 @@
       margin-left: 16px
   &__Text
     line-height: 1.5em
+    font-size: $font-size-standard
     @media (max-width: 767px)
+      margin: 0 16px
+      font-size: $font-size-standard
+    @media (max-width: 450px)
       margin: 0 16px
       font-size: $font-size-small
     p
       margin-bottom: 1em
+    &__CTA
+      color: $text-primary
+      font-weight: bold

@@ -26,7 +26,7 @@ function AboutSection({ headshot }) {
         </p>
         <p> 
           He is available for hire for freelance projects or consulting.&nbsp;
-          <a href="https://www.linkedin.com/in/adamkinson/">Reach out</a> to learn more!
+          <a className="AboutSection__Text__CTA" href="https://www.linkedin.com/in/adamkinson/">Reach out to learn more!</a>
         </p>
       </div>
     </div>
